@@ -1,0 +1,59 @@
+#Aside {
+    display: flex;
+    flex-direction: column;
+    width:200px;
+    position: absolute;
+    bottom:0px;
+    top:0px;
+    left:0px;
+    background-color:grey;
+    
+}
+
+img {
+    width: 100px;
+    height:auto;
+    }
+
+h1 {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+
+}
+
+#Menu_option {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    list-style-type: none;
+    gap: 50px; 
+    padding: 50px; 
+    position: absolute;
+    bottom: 25%;
+
+}
+
+#Menu_option a {
+    color:rgb(51, 51, 51);
+    text-decoration:none;
+    transition:0,3s ;
+    font-size: 30px;
+
+}
+
+#Menu_option a:hover {
+    color: blue;
+
+}
+
+.User_info {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    align-self: center;
+    position: absolute;
+    bottom: 5px;
+}
