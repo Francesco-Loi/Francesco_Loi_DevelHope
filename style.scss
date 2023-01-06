@@ -1,0 +1,58 @@
+$color-primary: red;
+$color-secondary:blue;
+$color-tertiary:green;
+
+body {
+
+    section {
+        display:flex;
+        flex-flow:row nowrap;
+        padding: 0px 10px 10px 10px;
+    }
+
+    div {
+        border: 1px solid $color-primary;
+    }
+
+    h1 {
+        color: $color-tertiary;
+        display:flex;
+        justify-content: center;
+        position:relative;
+    }
+    h1::before {
+        content:"";
+        position:absolute;
+        bottom: -5px;
+        align-items:center;
+        height:2px;
+        background-color: $color-secondary;
+        width: 23%;
+        
+    }
+
+    @mixin style($color, $border-color){
+        border-color: $border-color;
+        color:$color;
+        font-size:  1rem;
+        padding: 10px 30px 10px 30px;
+        text-align: center;
+        border:2px solid $border-color;
+        }
+    
+        article:first-child,article:nth-child(3) { 
+        @include style($color-secondary, $color-tertiary);
+    }
+    
+        article:nth-child(2), article:nth-child(4) {
+        @include style($color-primary, $color-tertiary);
+    }  
+
+        section:nth-last-of-type(1) article{
+        @include style($color-tertiary, $color-secondary);
+        display:flex;
+        justify-content: center;
+        padding: 10px 80px 10px 80px;
+        font-size: 24px;
+    }
+}
