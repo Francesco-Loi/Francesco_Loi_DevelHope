@@ -1,0 +1,53 @@
+body section {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 0px 10px 10px 10px;
+}
+body div {
+  border: 1px solid red;
+}
+body h1 {
+  color: green;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+body h1::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  align-items: center;
+  height: 2px;
+  background-color: blue;
+  width: 23%;
+}
+body article:first-child, body article:nth-child(3) {
+  border-color: green;
+  color: blue;
+  font-size: 1rem;
+  padding: 10px 30px 10px 30px;
+  text-align: center;
+  border: 2px solid green;
+}
+body article:nth-child(2), body article:nth-child(4) {
+  border-color: green;
+  color: red;
+  font-size: 1rem;
+  padding: 10px 30px 10px 30px;
+  text-align: center;
+  border: 2px solid green;
+}
+body section:nth-last-of-type(1) article {
+  border-color: blue;
+  color: green;
+  font-size: 1rem;
+  padding: 10px 30px 10px 30px;
+  text-align: center;
+  border: 2px solid blue;
+  display: flex;
+  justify-content: center;
+  padding: 10px 80px 10px 80px;
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
