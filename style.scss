@@ -1,0 +1,64 @@
+@use 'variabili';
+
+@function px-rem($px) {
+    $rem-size: 16;
+    @return calc($px / $rem-size) + rem;
+}
+
+body {
+border: 1px solid variabili.$color-primary;
+margin: 10px;
+
+    div {
+    & section {
+    display: flex;
+    flex-flow: nowrap;
+    padding: 0px 10px 10px 10px;
+    }
+
+        & h1 {
+        color: variabili.$color-tertiary;
+        display: flex;
+        justify-content: center;
+        text-decoration: underline variabili.$color-secondary;
+        }
+
+        & h2 {
+        @extend h1;
+        padding: 1rem;
+        border: 2px solid variabili.$color-primary;
+        text-decoration: none;
+        width: fit-content;
+        margin-left:40%;
+    }
+
+@mixin style ($color, $border-color) {
+color: $color;
+border-color: $border-color;
+font-size: px-rem(16);
+padding: 10px 30px 10px 30px;
+text-align: center;
+border: 2px solid $border-color;
+}
+
+    article {
+        &:first-child, &:nth-child(3) {
+        @include style (variabili.$color-secondary,variabili.$color-tertiary);
+        }
+
+        &:nth-child(2), &:nth-child(4) {
+        @include style (variabili.$color-primary,variabili.$color-tertiary);
+        }
+    }   
+
+    section {
+        &:nth-last-of-type(1) article {
+        @include style (variabili.$color-tertiary,variabili.$color-secondary);
+        display: flex;
+        justify-content: center;
+        padding: 10px 80px 10px 80px;
+        font-size: px-rem(24);
+    }
+    }
+    }
+}

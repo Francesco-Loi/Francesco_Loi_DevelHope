@@ -1,0 +1,52 @@
+body {
+  border: 1px solid red;
+  margin: 10px;
+}
+body div section {
+  display: flex;
+  flex-flow: nowrap;
+  padding: 0px 10px 10px 10px;
+}
+body div h1, body div h2 {
+  color: green;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline blue;
+}
+body div h2 {
+  padding: 1rem;
+  border: 2px solid red;
+  text-decoration: none;
+  width: fit-content;
+  margin-left: 40%;
+}
+body div article:first-child, body div article:nth-child(3) {
+  color: blue;
+  border-color: green;
+  font-size: 1rem;
+  padding: 10px 30px 10px 30px;
+  text-align: center;
+  border: 2px solid green;
+}
+body div article:nth-child(2), body div article:nth-child(4) {
+  color: red;
+  border-color: green;
+  font-size: 1rem;
+  padding: 10px 30px 10px 30px;
+  text-align: center;
+  border: 2px solid green;
+}
+body div section:nth-last-of-type(1) article {
+  color: green;
+  border-color: blue;
+  font-size: 1rem;
+  padding: 10px 30px 10px 30px;
+  text-align: center;
+  border: 2px solid blue;
+  display: flex;
+  justify-content: center;
+  padding: 10px 80px 10px 80px;
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
